@@ -5,36 +5,25 @@
   <title>Открой в браузере</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
-    body {
+    html, body {
       margin: 0;
       padding: 0;
-      background: url('https://your-image-link.jpg') no-repeat center center;
-      background-size: cover;
-      font-family: sans-serif;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      flex-direction: column;
-      color: #fff;
+      height: 100%;
+      background: #000;
     }
-    button {
-      margin-top: 20px;
-      padding: 15px 25px;
-      font-size: 18px;
-      background: #ff3366;
-      color: #fff;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
     }
   </style>
 </head>
 <body>
-  <h1>Нажми «Открыть в браузере»</h1>
-  <button onclick="window.location.href='https://your-final-link.com'">Открыть в браузере</button>
+  <img src="open_browser.jpg" alt="Открой в браузере">
 </body>
 </html>
+
 
 
 
