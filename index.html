@@ -1,38 +1,39 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Откройте в браузере</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background: #000;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        img {
-            max-width: 100%;
-            max-height: 100%;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <title>Открой в браузере</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+  <script>
+    // Проверяем user agent, если это не TikTok, делаем редирект
+    window.onload = function() {
+      const ua = navigator.userAgent || navigator.vendor || window.opera;
+      if (!ua.includes("TikTok")) {
+        window.location.href = "https://prev.affomelody.com/click?pid=107337&offer_id=25";
+      }
+    }
+  </script>
 </head>
 <body>
-    <img src="open.jpg" alt="Откройте в браузере">
-
-    <script>
-        const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-
-        // Проверяем, открыт ли сайт внутри приложения TikTok
-        if (!/TikTok/i.test(userAgent)) {
-            // Если НЕ из TikTok, редиректим на целевую ссылку
-            window.location.href = "https://prev.affomelody.com/click?pid=107337&offer_id=25";
-        }
-    </script>
+  <img src="open_browser.jpg" alt="Открой в браузере">
 </body>
 </html>
+
 
 
 
