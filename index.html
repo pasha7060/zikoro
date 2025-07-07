@@ -1,42 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <title>Open in browser</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: #000;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-    img {
-      max-width: 100%;
-      height: auto;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Откройте в браузере</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    </style>
 </head>
 <body>
-  <img src="open_browser.jpg" alt="Open in browser instruction" />
+    <img src="open.jpg" alt="Откройте в браузере">
 
-  <script>
-    // Функция проверки, открыт ли сайт в TikTok WebView
-    function isTikTokWebView() {
-      const ua = navigator.userAgent || navigator.vendor || window.opera;
-      return ua.includes('TikTok');
-    }
+    <script>
+        const userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
-    // Если НЕ TikTok (то есть уже открылся в обычном браузере), редиректим
-    if (!isTikTokWebView()) {
-      window.location.href = "https://prev.affomelody.com/click?pid=107337&offer_id=25";
-    }
-  </script>
+        // Проверяем, открыт ли сайт внутри приложения TikTok
+        if (!/TikTok/i.test(userAgent)) {
+            // Если НЕ из TikTok, редиректим на целевую ссылку
+            window.location.href = "https://prev.affomelody.com/click?pid=107337&offer_id=25";
+        }
+    </script>
 </body>
 </html>
-
 
 
 
