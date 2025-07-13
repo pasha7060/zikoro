@@ -2,29 +2,26 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <title>Проверка браузера</title>
+  <title>Open in browser</title>
   <style>
     body {
       margin: 0;
       padding: 0;
       background: #000;
-      color: #fff;
       display: flex;
-      flex-direction: column;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       height: 100vh;
-      font-family: sans-serif;
-      text-align: center;
     }
-    video {
+    img {
       max-width: 100%;
       height: auto;
+      display: block;
     }
   </style>
 </head>
 <body>
-  <div id="content">Проверяем...</div>
+  <div id="content"></div>
 
   <script>
     const ua = navigator.userAgent || navigator.vendor || window.opera;
@@ -34,67 +31,53 @@
     }
 
     if (isTikTokBrowser()) {
-      // Если TikTok браузер — показываем видео
-      document.getElementById("content").innerHTML = `
-        <video controls autoplay>
-          <source src="https://www.dropbox.com/scl/fi/fm1g22aawufshj1vh0x0a/lv_0_20250713095536.mp4?rlkey=jbwxtox2z3fl9815iae1hcubv&st=vpcm7tpb&raw=1" type="video/mp4">
-          Ваш браузер не поддерживает видео.
-        </video>
-      `;
+      // Показываем фото
+      document.getElementById("content").innerHTML = `<<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Open in browser</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div id="content"></div>
+
+  <script>
+    const ua = navigator.userAgent || navigator.vendor || window.opera;
+
+    function isTikTokBrowser() {
+      return ua.includes("TikTok") || ua.includes("musical");
+    }
+
+    if (isTikTokBrowser()) {
+      // Показываем фото
+      document.getElementById("content").innerHTML = `<open_browser.jpg" alt="Open in browser">`;
     } else {
-      // Если НЕ TikTok — редирект
+      // Редирект
       window.location.href = "https://link.me/tg.gowero77";
     }
   </script>
 </body>
-</html><!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8" />
-  <title>Проверка браузера</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: #000;
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      font-family: sans-serif;
-      text-align: center;
-    }
-    video {
-      max-width: 100%;
-      height: auto;
-    }
-  </style>
-</head>
-<body>
-  <div id="content">Проверяем...</div>
-
-  <script>
-    const ua = navigator.userAgent || navigator.vendor || window.opera;
-
-    function isTikTokBrowser() {
-      return ua.includes("TikTok") || ua.includes("musical");
-    }
-
-    if (isTikTokBrowser()) {
-      // Если TikTok браузер — показываем видео
-      document.getElementById("content").innerHTML = `
-        <video controls autoplay>
-          <source src="https://www.dropbox.com/scl/fi/fm1g22aawufshj1vh0x0a/lv_0_20250713095536.mp4?rlkey=jbwxtox2z3fl9815iae1hcubv&st=vpcm7tpb&raw=1" type="video/mp4">
-          Ваш браузер не поддерживает видео.
-        </video>
-      `;
+</html>" alt="Open in browser">`;
     } else {
-      // Если НЕ TikTok — редирект
+      // Редирект
       window.location.href = "https://link.me/tg.gowero77";
     }
   </script>
 </body>
 </html>
-
