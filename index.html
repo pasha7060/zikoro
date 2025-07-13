@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -32,48 +33,7 @@
 
     if (isTikTokBrowser()) {
       // Показываем фото
-      document.getElementById("content").innerHTML = `<<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8" />
-  <title>Open in browser</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: #000;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
-  </style>
-</head>
-<body>
-  <div id="content"></div>
-
-  <script>
-    const ua = navigator.userAgent || navigator.vendor || window.opera;
-
-    function isTikTokBrowser() {
-      return ua.includes("TikTok") || ua.includes("musical");
-    }
-
-    if (isTikTokBrowser()) {
-      // Показываем фото
-       document.getElementById("content").innerHTML = `<img src="open_browser9.jpg" alt="Open in browser">`;
-    } else {
-      // Редирект
-      window.location.href = "https://link.me/tg.gowero77";
-    }
-  </script>
-</body>
-</html>" alt="Open in browser">`;
+      document.getElementById("content").innerHTML = `<img src="open_browser9.jpg" alt="Open in browser">`;
     } else {
       // Редирект
       window.location.href = "https://link.me/tg.gowero77";
