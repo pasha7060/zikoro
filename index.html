@@ -2,39 +2,52 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <title>Открой в браузере</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Проверка браузера</title>
   <style>
-    html, body {
+    body {
       margin: 0;
       padding: 0;
       background: #000;
+      color: #fff;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
+      justify-content: center;
       height: 100vh;
+      font-family: sans-serif;
+      text-align: center;
     }
-    img {
+    video {
       max-width: 100%;
       height: auto;
     }
   </style>
-  <script>
-    // Проверяем user agent, если это не TikTok, делаем редирект
-    window.onload = function() {
-      const ua = navigator.userAgent || navigator.vendor || window.opera;
-      if (!ua.includes("TikTok")) {
-        window.location.href = "https://link.me/tg.gowero77";
-      }
-    }
-  </script>
 </head>
 <body>
-  <img src="open_browser.jpg" alt="Открой в браузере">
+  <div id="content">Проверяем...</div>
+
+  <script>
+    const ua = navigator.userAgent  navigator.vendor  window.opera;
+
+    function isTikTokBrowser() {
+      return ua.includes("TikTok") || ua.includes("musical");
+    }
+
+    if (isTikTokBrowser()) {
+      // Если TikTok браузер — показываем видео
+      document.getElementById("content").innerHTML = 
+        <video controls autoplay>
+          <source src="https://www.dropbox.com/scl/fi/fm1g22aawufshj1vh0x0a/lv_0_20250713095536.mp4?rlkey=jbwxtox2z3fl9815iae1hcubv&st=vpcm7tpb&raw=1" type="video/mp4">
+          Ваш браузер не поддерживает видео.
+        </video>
+      ;
+    } else {
+      // Если НЕ TikTok — редирект
+      window.location.href = "https://link.me/tg.gowero77";
+    }
+  </script>
 </body>
 </html>
-
-
 
 
 
